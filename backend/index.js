@@ -14,7 +14,7 @@ app.use(express.json())
 // app.use("/",(req,res)=>{
 //     res.json({message:"Hello Home Page"})
 // });
-app.use('/api/auth',require('./routes/auth.js'))
+app.use('/api',require('./routes/auth.js'))
 app.use('/api/notes',require('./routes/notes.js'))
 app.listen(port,()=>{
     console.log(`iNotebook server is running at ${port} port`)
