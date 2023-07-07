@@ -11,6 +11,9 @@ const port = 3001;
 app.use(express.json())
 
 // available routes;
+app.use("/",(req,res)=>{
+    res.json({message:"Hello Home Page"})
+});
 app.use('/api/auth',require('./routes/auth.js'))
 app.use('/api/notes',require('./routes/notes.js'))
 app.listen(port,()=>{
